@@ -1,0 +1,9 @@
+kr/or/visitkorea/batch/ExcelImageExsitCheckPlugin.class
+kr/or/visitkorea/batch/Plugin.class
+kr/or/visitkorea/batch/ExcelImageUploadPlugin.class
+kr/or/visitkorea/model/Image.class
+kr/or/visitkorea/batch/ExcelImage.class
+kr/or/visitkorea/repository/Executer.class
+kr/or/visitkorea/batch/App.class
+kr/or/visitkorea/repository/ContentMasterTableUtils.class
+kr/or/visitkorea/repository/ImageTableUtils.class
