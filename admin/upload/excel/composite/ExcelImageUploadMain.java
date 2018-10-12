@@ -5,6 +5,7 @@ import com.google.gwt.dom.client.Style.Position;
 import gwt.material.design.client.constants.IconType;
 import gwt.material.design.client.constants.TextAlign;
 import gwt.material.design.client.ui.MaterialIcon;
+import kr.or.visitkorea.admin.client.manager.upload.excel.ExcelImageUploadApplication;
 import kr.or.visitkorea.admin.client.manager.widgets.AbstractContentPanel;
 import kr.or.visitkorea.admin.client.manager.widgets.ContentMenuPanel;
 import kr.or.visitkorea.admin.client.manager.widgets.ContentTable;
@@ -39,13 +40,13 @@ public class ExcelImageUploadMain extends AbstractContentPanel {
 		MaterialIcon uploadIcon = new MaterialIcon(IconType.CLOUD_UPLOAD); // FILE_UPLOAD
 		uploadIcon.setTextAlign(TextAlign.CENTER);
 		uploadIcon.addClickHandler(event-> {
-			// TODO: Handle event : to pop up upload dialog
+			getMaterialExtentsWindow().openDialog(ExcelImageUploadApplication.UPLOAD_EXCEL_DIALOG, 720);
 		});
 
 		MaterialIcon searchIcon = new MaterialIcon(IconType.SEARCH);
 		searchIcon.setTextAlign(TextAlign.CENTER);
 		searchIcon.addClickHandler(event-> {
-			// TODO: Handle event : to pop up search dialog
+			getMaterialExtentsWindow().openDialog(ExcelImageUploadApplication.SEARCH_WITH_CALENDAR_DIALOG, 720);
 		});
 		table.getTopMenu().addIcon(uploadIcon, "업로드", com.google.gwt.dom.client.Style.Float.LEFT, "1.8em", "26px", 24, false);
 		table.getTopMenu().addIcon(searchIcon, "검색", com.google.gwt.dom.client.Style.Float.RIGHT, "1.8em", "26px", 24, false);

@@ -5,9 +5,14 @@ import java.util.Map;
 import kr.or.visitkorea.admin.client.application.ApplicationView;
 import kr.or.visitkorea.admin.client.manager.ApplicationBase;
 import kr.or.visitkorea.admin.client.manager.upload.excel.composite.ExcelImageUploadMain;
+import kr.or.visitkorea.admin.client.manager.upload.excel.dialog.SearchDialog;
+import kr.or.visitkorea.admin.client.manager.upload.excel.dialog.UploadDialog;
 import kr.or.visitkorea.admin.client.widgets.window.MaterialExtentsWindow;
 
 public class ExcelImageUploadApplication extends ApplicationBase {
+
+	public static final String UPLOAD_EXCEL_DIALOG = "UPLOAD_EXCEL_DILAOG";
+	public static final String SEARCH_WITH_CALENDAR_DIALOG = "SEARCH_WITH_CALENDAR_DIALOG";
 
 	public ExcelImageUploadApplication(ApplicationView applicationView) {
 		super(applicationView);
@@ -21,6 +26,8 @@ public class ExcelImageUploadApplication extends ApplicationBase {
 		this.window.addCloseHandler(event -> {
 			windowLiveFlag = false;
 		});
+		this.window.addDialog(UPLOAD_EXCEL_DIALOG, new UploadDialog(this.window));
+		this.window.addDialog(SEARCH_WITH_CALENDAR_DIALOG, new SearchDialog(this.window));
 	}
 
 	@Override

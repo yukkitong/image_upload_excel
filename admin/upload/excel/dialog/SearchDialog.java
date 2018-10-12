@@ -23,7 +23,8 @@ public class SearchDialog extends DialogContent {
 
         MaterialButton button = new MaterialButton("검색");
         button.setBackgroundColor(Color.RED_LIGHTEN_2);
-        button.addClickHandler(event->{
+        button.addClickHandler(event -> {
+            // TODO: handle click event to search
         });
         this.addButton(button);
     }
